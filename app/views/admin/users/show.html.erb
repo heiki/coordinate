@@ -1,0 +1,108 @@
+<h3>Name : <%= @user.name %> </h3>
+<h3>Email : <%= @user.email %></h3>	
+<h3>Gender : <%= @user.gender %></h3>	
+
+<% if @user.gender == "female" %>
+
+	<h4>Tops</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Top" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Bottoms</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Bottom" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Shoes</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Shoes" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Bags</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Bag" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Accessories</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Accessory" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Dresses</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Dress" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Outer wears</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Outer wear" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Hat & Scaf</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Hat & Scaf" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+	<br>
+
+<% else %>
+
+	<h4>Tops</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Top" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Bottoms</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Bottom" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Shoes</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Shoes" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Bags</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Bag" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+
+	<h4>Accessories</h4>
+	<% @products.each do |product|%>
+		<% if product.category.name == "Accessory" %>
+			<%= image_tag product.productphoto.url(:thumb) %>
+		<% end %>
+	<% end %>
+	
+<% end %>
+<br>
+<%= link_to "Back", admin_users_path %>
+
+
+
+
+

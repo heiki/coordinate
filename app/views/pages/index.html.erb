@@ -1,0 +1,117 @@
+<h1>Home Page</h1>
+
+<% if user_signed_in? %>
+	
+	<% if current_user.admin? %>
+		<%= link_to "Admin", admin_users_path %><br>
+	<% end %>
+	
+	Name : <%= current_user.name %><br>
+	Email : <%= current_user.email %><br>
+	Gender : <%= current_user.gender %><br>
+	
+	<% if current_user.gender == "female" %>
+
+		<h4>Tops</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Top" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Bottoms</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Bottom" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Shoes</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Shoes" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Bags</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Bag" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Accessories</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Accessory" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Dresses</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Dress" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Outer wears</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Outer wear" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Hat & Scaf</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Hat & Scaf" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+		<br>
+
+	<% else %>
+
+		<h4>Tops</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Top" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Bottoms</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Bottom" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Shoes</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Shoes" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Bags</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Bag" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+		<h4>Accessories</h4>
+		<% current_user.products.each do |product|%>
+			<% if product.category.name == "Accessory" %>
+				<%= image_tag product.productphoto.url %>
+			<% end %>
+		<% end %>
+
+	<% end %>
+	<br>
+	
+	<%= link_to("Edit your information", edit_user_registration_path) %><br>
+	<%= link_to("sign out", destroy_user_session_path, :method => "DELETE" ) %>
+<% else %>
+	<%= link_to("sign up", new_user_registration_path) %><br>
+	<%= link_to("sign in", new_user_session_path) %> 
+<% end %>

@@ -1,0 +1,7 @@
+<div>
+  <% @products.each do |product| %>
+  <%= image_tag product.product_image.url(:thumb) %><br>
+  <% end %>
+</div>
+
+<%= link_to "Back", root_path %>
