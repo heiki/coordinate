@@ -36,7 +36,7 @@
 
   product = Product.new
   product.productphoto = File.open('/Users/chacha198432/Desktop/temp/scaf.png')
-  product.user_id = 1
+  product.user_id = 2
   product.category_id = 8
   product.save
 
@@ -48,13 +48,13 @@
 
   product = Product.new
   product.productphoto = File.open('/Users/chacha198432/Desktop/temp/hat1.png')
-  product.user_id = 1
+  product.user_id = 2
   product.category_id = 8
   product.save
 
   product = Product.new
   product.productphoto = File.open('/Users/chacha198432/Desktop/temp/hat.png')
-  product.user_id = 1
+  product.user_id = 2
   product.category_id = 8
   product.save
 
